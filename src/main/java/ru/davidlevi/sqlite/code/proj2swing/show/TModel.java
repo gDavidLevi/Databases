@@ -1,4 +1,4 @@
-package sqlite.code.proj2swing.show;
+package ru.davidlevi.sqlite.code.proj2swing.show;
 
 import javax.swing.table.*;
 import java.sql.*;

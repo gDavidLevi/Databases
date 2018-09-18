@@ -1,4 +1,4 @@
-database.sqlite
+database.ru.davidlevi.sqlite
 select * from spr_Model;
 select * from spr_Condition;
 select * from spr_Privod;

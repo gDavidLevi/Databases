@@ -1,7 +1,7 @@
-package sqlite.code.proj2swing.show;
+package ru.davidlevi.sqlite.code.proj2swing.show;
 
-import sqlite.code.proj2swing.SQLiteConnection;
-import sqlite.code.proj2swing.TCellRenderer;
+import ru.davidlevi.sqlite.code.proj2swing.SQLiteConnection;
+import ru.davidlevi.sqlite.code.proj2swing.TCellRenderer;
 
 import java.sql.*;
 import java.util.Comparator;

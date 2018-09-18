@@ -108,7 +108,6 @@
     <index id="39" parent="7" name="sqlite_autoindex_Car_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>transport_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="40" parent="7">
@@ -348,7 +347,6 @@
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name_ru
 name_en</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="85" parent="12">
@@ -380,7 +378,6 @@ name_en</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name_ru
 name_en</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="91" parent="13">
@@ -412,7 +409,6 @@ name_en</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name_ru
 name_en</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="97" parent="14">
@@ -444,7 +440,6 @@ name_en</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name_ru
 name_en</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="103" parent="15">
@@ -486,7 +481,6 @@ name_en</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name_ru
 name_en</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="111" parent="16">
@@ -518,7 +512,6 @@ name_en</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name_ru
 name_en</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="117" parent="17">
@@ -570,7 +563,6 @@ name_en</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name_ru
 name_en</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="127" parent="19">
@@ -602,7 +594,6 @@ name_en</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name_ru
 name_en</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="133" parent="20">

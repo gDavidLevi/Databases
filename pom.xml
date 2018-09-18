@@ -12,6 +12,7 @@
         <sqlite-jdbc-version>3.23.1</sqlite-jdbc-version>
         <mysql-jdbc-version>8.0.12</mysql-jdbc-version>
         <mariadb-jdbc-version>2.3.0</mariadb-jdbc-version>
+        <mongodb-jdbc-version>3.8.1</mongodb-jdbc-version>
     </properties>
 
     <dependencies>
@@ -34,6 +35,34 @@
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
             <version>${mariadb-jdbc-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver</artifactId>
+            <version>${mongodb-jdbc-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-core -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-core</artifactId>
+            <version>${mongodb-jdbc-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mongodb/bson -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>bson</artifactId>
+            <version>${mongodb-jdbc-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-async -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-async</artifactId>
+            <version>${mongodb-jdbc-version}</version>
         </dependency>
     </dependencies>
 

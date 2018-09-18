@@ -6,17 +6,17 @@ sudo apt-get install sqlitebrowser
 ``` 
 
 ### Драйвер JDBC
-http://mvnrepository.com/artifact/org.xerial/sqlite-jdbc 
-https://bitbucket.org/xerial/sqlite-jdbc/downloads/
+http://mvnrepository.com/artifact/org.xerial/ru.davidlevi.sqlite-jdbc 
+https://bitbucket.org/xerial/ru.davidlevi.sqlite-jdbc/downloads/
 
 ### Документация
-https://www.sqlite.org/docs.html 
+https://www.ru.davidlevi.sqlite.org/docs.html 
 
 ### Синтаксис
-https://www.sqlite.org/lang.html
+https://www.ru.davidlevi.sqlite.org/lang.html
 
 ### Все виды доступных join
-http://sqlite.org/syntaxdiagrams.html#join-op
+http://ru.davidlevi.sqlite.org/syntaxdiagrams.html#join-op
 ![alt text](type-join.png)
 
 ### SQLite
@@ -24,7 +24,7 @@ http://sqlite.org/syntaxdiagrams.html#join-op
  - Не рекомендуется расшаривать БД: проблемы с блокировкой.
 
 ### Типы данных
-https://www.sqlite.org/datatype3.html: 
+https://www.ru.davidlevi.sqlite.org/datatype3.html: 
 - INTEGER
 - TEXT
 - BLOB

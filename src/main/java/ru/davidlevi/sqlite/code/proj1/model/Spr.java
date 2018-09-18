@@ -1,4 +1,4 @@
-package sqlite.code.proj1.model;
+package ru.davidlevi.sqlite.code.proj1.model;
 
 /**
  * Модель описывает все таблицы "spr_"

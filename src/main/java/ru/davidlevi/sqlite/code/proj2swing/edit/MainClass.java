@@ -1,8 +1,8 @@
-package sqlite.code.proj2swing.edit;
+package ru.davidlevi.sqlite.code.proj2swing.edit;
 
-import sqlite.code.proj2swing.SQLiteConnection;
-import sqlite.code.proj2swing.show.TModel;
-import sqlite.code.proj2swing.TCellRenderer;
+import ru.davidlevi.sqlite.code.proj2swing.SQLiteConnection;
+import ru.davidlevi.sqlite.code.proj2swing.show.TModel;
+import ru.davidlevi.sqlite.code.proj2swing.TCellRenderer;
 
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;

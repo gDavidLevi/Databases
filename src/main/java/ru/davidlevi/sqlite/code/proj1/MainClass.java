@@ -1,7 +1,7 @@
-package sqlite.code.proj1;
+package ru.davidlevi.sqlite.code.proj1;
 
-import sqlite.code.proj1.dao.DatabaseController;
-import sqlite.code.proj1.model.Spr;
+import ru.davidlevi.sqlite.code.proj1.dao.DatabaseController;
+import ru.davidlevi.sqlite.code.proj1.model.Spr;
 
 import java.io.*;
 import java.util.ArrayList;

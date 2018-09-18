@@ -1,6 +1,6 @@
-package sqlite.code.proj2swing.insert;
+package ru.davidlevi.sqlite.code.proj2swing.insert;
 
-import sqlite.code.proj2swing.TCellRenderer;
+import ru.davidlevi.sqlite.code.proj2swing.TCellRenderer;
 
 import java.awt.Cursor;
 import java.awt.Desktop;

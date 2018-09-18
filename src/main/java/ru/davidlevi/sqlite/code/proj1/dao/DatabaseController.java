@@ -1,6 +1,6 @@
-package sqlite.code.proj1.dao;
+package ru.davidlevi.sqlite.code.proj1.dao;
 
-import sqlite.code.proj1.model.Spr;
+import ru.davidlevi.sqlite.code.proj1.model.Spr;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ public class DatabaseController {
     public static void openConnection(String path) {
         try {
             if (connection == null)
-                connection = DriverManager.getConnection("jdbc:sqlite:" + path);
+                connection = DriverManager.getConnection("jdbc:ru.davidlevi.sqlite:" + path);
         } catch (SQLException e) {
             Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, e);
         }

@@ -1,4 +1,4 @@
-package sqlite.code.proj2swing;
+package ru.davidlevi.sqlite.code.proj2swing;
 
 import java.awt.Color;
 import java.awt.Component;
