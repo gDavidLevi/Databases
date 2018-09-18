@@ -1,0 +1,24 @@
+Query: select * from spr_Model;
+1 Прадо (Prado)
+2 Land Cruiser (Лэнд Крузер)
+3 Пассат (Passat)
+4 Гольф (Golf)
+5 РАВ 4 (RAV 4)
+6 Камри (Camry)
+7 Корола (Corolla)
+8 Галант (Galant)
+
+Query: select * from spr_Condition;
+1 Новая (New)
+2 Подержаная (Used)
+
+Query: select * from spr_Privod;
+1 передний (forward)
+2 задний (back)
+3 полный (all)
+
+Query: select * from spr_Color;
+1 Синий (Blue)
+2 Красный (Red)
+3 Зеленый (Green)
+

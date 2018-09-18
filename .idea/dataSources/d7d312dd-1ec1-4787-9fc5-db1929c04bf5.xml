@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="database.sqlite">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.11">
+    <root id="1">
+      <ServerVersion>3.20.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="Car"/>
+    <table id="7" parent="2" name="Sale"/>
+    <table id="8" parent="2" name="Seller"/>
+    <table id="9" parent="2" name="Transport"/>
+    <table id="10" parent="2" name="spr_Brand"/>
+    <table id="11" parent="2" name="spr_CarType"/>
+    <table id="12" parent="2" name="spr_Color"/>
+    <table id="13" parent="2" name="spr_Condition"/>
+    <table id="14" parent="2" name="spr_Currency"/>
+    <table id="15" parent="2" name="spr_Model"/>
+    <table id="16" parent="2" name="spr_Privod"/>
+    <table id="17" parent="2" name="spr_Transmission"/>
+    <table id="18" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="19" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <table id="20" parent="2" name="sqlite_stat1"/>
+    <column id="21" parent="6" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="22" parent="6" name="car_type_id">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="6" name="model_id">
+      <Position>3</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="6" name="transmission_id">
+      <Position>4</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="6" name="privod_id">
+      <Position>5</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="6" name="capacity">
+      <Position>6</Position>
+      <DataType>DOUBLE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="6" name="transport_id">
+      <Position>7</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="28" parent="6" name="sqlite_autoindex_Car_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>transport_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="6">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="30" parent="6" name="constr_transport">
+      <ColNames>transport_id</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_Car_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="31" parent="6" name="fk_car_type">
+      <ColNames>car_type_id</ColNames>
+      <RefTableName>spr_CarType</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="32" parent="6" name="fk_model">
+      <ColNames>model_id</ColNames>
+      <RefTableName>spr_Model</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="33" parent="6" name="fk_transmission">
+      <ColNames>transmission_id</ColNames>
+      <RefTableName>spr_Transmission</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="34" parent="6" name="fk_privod">
+      <ColNames>privod_id</ColNames>
+      <RefTableName>spr_Privod</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="35" parent="6" name="fk_transport">
+      <ColNames>transport_id</ColNames>
+      <RefTableName>Transport</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="36" parent="7" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="7" name="seller_id">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="7" name="sale_date">
+      <Position>3</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="7" name="transport_id">
+      <Position>4</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="7" name="description">
+      <Position>5</Position>
+      <DataType>NVARCHAR(500)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="41" parent="7">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="42" parent="7" name="fk_seller">
+      <ColNames>seller_id</ColNames>
+      <RefTableName>Seller</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="43" parent="7" name="fk_transport">
+      <ColNames>transport_id</ColNames>
+      <RefTableName>Transport</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="44" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="45" parent="8" name="fio">
+      <Position>2</Position>
+      <DataType>NVARCHAR(200)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="8" name="birthday">
+      <Position>3</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="47" parent="8">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="48" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="49" parent="9" name="brand_id">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="9" name="price">
+      <Position>3</Position>
+      <DataType>DOUBLE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="9" name="issue_date">
+      <Position>4</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="9" name="currency_id">
+      <Position>5</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="53" parent="9" name="condition_id">
+      <Position>6</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="9" name="color_id">
+      <Position>7</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="9" name="description">
+      <Position>8</Position>
+      <DataType>NVARCHAR(500)|0s</DataType>
+    </column>
+    <key id="56" parent="9">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="57" parent="9" name="fk_brand">
+      <ColNames>brand_id</ColNames>
+      <RefTableName>spr_Brand</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="58" parent="9" name="fk_currency">
+      <ColNames>currency_id</ColNames>
+      <RefTableName>spr_Currency</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="59" parent="9" name="fk_condition">
+      <ColNames>condition_id</ColNames>
+      <RefTableName>spr_Condition</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="60" parent="9" name="fk_color">
+      <ColNames>color_id</ColNames>
+      <RefTableName>spr_Color</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="61" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="62" parent="10" name="name_ru">
+      <Position>2</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="10" name="name_en">
+      <Position>3</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="64" parent="10" name="sqlite_autoindex_spr_Brand_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name_ru
+name_en</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="10">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="66" parent="10">
+      <ColNames>name_ru
+name_en</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_spr_Brand_1</UnderlyingIndexName>
+    </key>
+    <column id="67" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="68" parent="11" name="name_ru">
+      <Position>2</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="11" name="name_en">
+      <Position>3</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="70" parent="11" name="sqlite_autoindex_spr_CarType_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name_ru
+name_en</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="11">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="72" parent="11">
+      <ColNames>name_ru
+name_en</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_spr_CarType_1</UnderlyingIndexName>
+    </key>
+    <column id="73" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="74" parent="12" name="name_ru">
+      <Position>2</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="12" name="name_en">
+      <Position>3</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="76" parent="12" name="sqlite_autoindex_spr_Color_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name_ru
+name_en</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="77" parent="12">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="78" parent="12">
+      <ColNames>name_ru
+name_en</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_spr_Color_1</UnderlyingIndexName>
+    </key>
+    <column id="79" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="80" parent="13" name="name_ru">
+      <Position>2</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="13" name="name_en">
+      <Position>3</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="82" parent="13" name="sqlite_autoindex_spr_Condition_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name_ru
+name_en</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="83" parent="13">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="84" parent="13">
+      <ColNames>name_ru
+name_en</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_spr_Condition_1</UnderlyingIndexName>
+    </key>
+    <column id="85" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="86" parent="14" name="name_ru">
+      <Position>2</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="14" name="name_en">
+      <Position>3</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="14" name="shortname_ru">
+      <Position>4</Position>
+      <DataType>NVARCHAR(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="14" name="shortname_en">
+      <Position>5</Position>
+      <DataType>NVARCHAR(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="90" parent="14" name="sqlite_autoindex_spr_Currency_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name_ru
+name_en</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="91" parent="14">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="92" parent="14">
+      <ColNames>name_ru
+name_en</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_spr_Currency_1</UnderlyingIndexName>
+    </key>
+    <column id="93" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="94" parent="15" name="name_ru">
+      <Position>2</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="15" name="name_en">
+      <Position>3</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="96" parent="15" name="sqlite_autoindex_spr_Model_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name_ru
+name_en</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="97" parent="15">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="98" parent="15">
+      <ColNames>name_ru
+name_en</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_spr_Model_1</UnderlyingIndexName>
+    </key>
+    <column id="99" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="100" parent="16" name="name_ru">
+      <Position>2</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="16" name="name_en">
+      <Position>3</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="102" parent="16" name="sqlite_autoindex_spr_Privod_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name_ru
+name_en</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="103" parent="16">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="104" parent="16">
+      <ColNames>name_ru
+name_en</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_spr_Privod_1</UnderlyingIndexName>
+    </key>
+    <column id="105" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="106" parent="17" name="name_ru">
+      <Position>2</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="17" name="name_en">
+      <Position>3</Position>
+      <DataType>NVARCHAR(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="108" parent="17" name="sqlite_autoindex_spr_Transmission_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name_ru
+name_en</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="109" parent="17">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="110" parent="17">
+      <ColNames>name_ru
+name_en</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_spr_Transmission_1</UnderlyingIndexName>
+    </key>
+    <column id="111" parent="18" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="112" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="113" parent="18" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="114" parent="18" name="rootpage">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="115" parent="18" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="116" parent="19" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="117" parent="19" name="seq">
+      <Position>2</Position>
+    </column>
+    <column id="118" parent="20" name="tbl">
+      <Position>1</Position>
+    </column>
+    <column id="119" parent="20" name="idx">
+      <Position>2</Position>
+    </column>
+    <column id="120" parent="20" name="stat">
+      <Position>3</Position>
+    </column>
+  </database-model>
+</dataSource>
