@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 /**
  * Контроллер базы данных (организация подключения, выполнение запросов)
  */
-public class DatabaseController {
+public class SqliteConnector1 {
     private static Connection connection;
 
     /**
@@ -23,7 +23,7 @@ public class DatabaseController {
             if (connection == null)
                 connection = DriverManager.getConnection("jdbc:ru.davidlevi.sqlite:" + path);
         } catch (SQLException e) {
-            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(SqliteConnector1.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 
@@ -42,7 +42,7 @@ public class DatabaseController {
             System.out.println();
             resultSet.close();
         } catch (SQLException ex) {
-            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SqliteConnector1.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -65,7 +65,7 @@ public class DatabaseController {
                 list.add(spr);
             }
         } catch (SQLException e) {
-            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(SqliteConnector1.class.getName()).log(Level.SEVERE, null, e);
         }
         return list;
     }
@@ -77,7 +77,7 @@ public class DatabaseController {
         try {
             if (connection != null) connection.close();
         } catch (SQLException e) {
-            Logger.getLogger(DatabaseController.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(SqliteConnector1.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 }

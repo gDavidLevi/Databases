@@ -1,6 +1,6 @@
 package ru.davidlevi.sqlite.code.proj2swing.show;
 
-import ru.davidlevi.sqlite.code.proj2swing.SQLiteConnection;
+import ru.davidlevi.sqlite.code.proj2swing.dao.SqliteConnector2;
 import ru.davidlevi.sqlite.code.proj2swing.TCellRenderer;
 
 import java.sql.*;
@@ -15,7 +15,7 @@ import javax.swing.table.TableRowSorter;
  */
 public class MainClass {
     public static void main(String[] args) {
-        try (Connection connection = SQLiteConnection.getConnection()) {
+        try (Connection connection = SqliteConnector2.getConnection()) {
             /*
             CarBrand - это представление созданное:
 

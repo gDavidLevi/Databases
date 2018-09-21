@@ -8,6 +8,7 @@
     <artifactId>databases</artifactId>
     <version>1.0</version>
 
+    <!--18.09.2018-->
     <properties>
         <sqlite-jdbc-version>3.23.1</sqlite-jdbc-version>
         <mysql-jdbc-version>8.0.12</mysql-jdbc-version>

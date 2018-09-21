@@ -1,4 +1,4 @@
-package ru.davidlevi.sqlite.code.proj2swing;
+package ru.davidlevi.sqlite.code.proj2swing.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 /**
  * Коннектер
  */
-public class SQLiteConnection {
+public class SqliteConnector2 {
     private static Connection connection;
 
     /**
@@ -21,7 +21,7 @@ public class SQLiteConnection {
                 connection = DriverManager.getConnection("jdbc:ru.davidlevi.sqlite:carshop.ru.davidlevi.sqlite");
             return connection;
         } catch (SQLException e) {
-            Logger.getLogger(SQLiteConnection.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(SqliteConnector2.class.getName()).log(Level.SEVERE, null, e);
         }
         return null;
     }

@@ -1,6 +1,6 @@
 package ru.davidlevi.sqlite.code.proj2swing.edit;
 
-import ru.davidlevi.sqlite.code.proj2swing.SQLiteConnection;
+import ru.davidlevi.sqlite.code.proj2swing.dao.SqliteConnector2;
 import ru.davidlevi.sqlite.code.proj2swing.show.TModel;
 import ru.davidlevi.sqlite.code.proj2swing.TCellRenderer;
 
@@ -28,7 +28,7 @@ public class MainClass {
     public static void main(String[] args) {
         try {
             // Подключение к БД и таблице
-            final Connection con = SQLiteConnection.getConnection();
+            final Connection con = SqliteConnector2.getConnection();
             final TModel mod = new TModel(con, TABLE_NAME);
 
             // Таблица

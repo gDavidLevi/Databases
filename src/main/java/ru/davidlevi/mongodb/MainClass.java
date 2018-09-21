@@ -1,5 +1,6 @@
 package ru.davidlevi.mongodb;
 
+import ru.davidlevi.mongodb.dao.MongoConnector;
 import ru.davidlevi.mongodb.model.User;
 
 import java.util.Properties;
@@ -21,7 +22,7 @@ public class MainClass {
         databaseAndTable.setProperty("database", "admin"); // database name
         databaseAndTable.setProperty("table", "users"); // table or collection
 
-        MongoConnecter mongo = new MongoConnecter(socket, databaseAndTable);
+        MongoConnector mongo = new MongoConnector(socket, databaseAndTable);
         System.out.println("Connected to server? : " + mongo.isConnected());
 
         User user;

@@ -1,6 +1,6 @@
 package ru.davidlevi.sqlite.code.proj1;
 
-import ru.davidlevi.sqlite.code.proj1.dao.DatabaseController;
+import ru.davidlevi.sqlite.code.proj1.dao.SqliteConnector1;
 import ru.davidlevi.sqlite.code.proj1.model.Spr;
 
 import java.io.*;
@@ -40,10 +40,10 @@ public class MainClass {
             }
 
             // Открыть подключение
-            DatabaseController.openConnection(databaseName);
+            SqliteConnector1.openConnection(databaseName);
 
             // Отобразить содержимое справочника spr_Model
-            //DatabaseController.showSpr_Model();
+            //SqliteConnector1.showSpr_Model();
 
             // Сформируем список запросов из файла commands_sqlite.txt
             ArrayList<String> listQueries = new ArrayList<>();
@@ -58,7 +58,7 @@ public class MainClass {
             StringBuilder result = new StringBuilder();
             for (String query : listQueries) {
                 result.append("Query: ").append(query).append("\n");
-                ArrayList<Spr> resultQuery = DatabaseController.getResultList(query);
+                ArrayList<Spr> resultQuery = SqliteConnector1.getResultList(query);
                 for (Spr spr : resultQuery)
                     result.append(String.format("%s %s (%s)%n", spr.getId(), spr.getName_ru(), spr.getName_en()));
                 result.append("\n");
@@ -69,7 +69,7 @@ public class MainClass {
             saveToFile(result.toString());
 
             // Закроем подключение
-            DatabaseController.closeConnection();
+            SqliteConnector1.closeConnection();
         } catch (IOException e) {
             Logger.getLogger(MainClass.class.getName()).log(Level.SEVERE, null, e);
         }

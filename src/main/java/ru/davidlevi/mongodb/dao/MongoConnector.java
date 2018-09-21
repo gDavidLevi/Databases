@@ -1,4 +1,4 @@
-package ru.davidlevi.mongodb;
+package ru.davidlevi.mongodb.dao;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
@@ -13,9 +13,9 @@ import org.bson.conversions.Bson;
 import java.util.Properties;
 
 /**
- * MongoConnecter
+ * MongoConnector
  */
-public class MongoConnecter {
+public class MongoConnector {
     private MongoClient connection;
     private MongoCollection<Document> table;  // table or Collection
     private boolean isConnected = true;
@@ -25,7 +25,7 @@ public class MongoConnecter {
      *
      * @param socket Properties
      */
-    public MongoConnecter(Properties socket, Properties databaseAndTable) {
+    public MongoConnector(Properties socket, Properties databaseAndTable) {
         try {
             connection = new MongoClient(socket.getProperty("host"), Integer.valueOf(socket.getProperty("port")));
             MongoDatabase mongoDatabase = connection.getDatabase(databaseAndTable.getProperty("database"));
